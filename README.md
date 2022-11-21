@@ -1,2 +1,1 @@
-# todo
-Todo list in solidity
+A todo list created using Solidity. The smart contract creates a todo list and marks each todo completion as false. You can mark the todo completion as true by changing the "false" in the create function to rue".
