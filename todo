@@ -1,0 +1,23 @@
+contract Yourtodo {
+// create a struct of string and bool
+struct Todo {
+    string text;
+    bool completed;
+}
+
+// store your todo in a variable 
+Todo [] public todos;
+
+// Write a function that creates todos
+function create(string memory text) public {
+    todos.push(Todo(text, false));
+}
+
+// Write a function to get todos one after the other and return them
+function get(uint index) public view returns (string memory, bool) {
+    Todo storage todo = todos[index]; // storage kewyord stores all state variables
+    return(todo.text, todo.completed);
+}
+
+
+}
